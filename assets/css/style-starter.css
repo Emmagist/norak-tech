@@ -253,6 +253,7 @@ button:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+
 input,
 button,
 select,
@@ -14176,7 +14177,7 @@ h4.abt-right-text {
 
 /* content with bg */
 .w3l-content-bg {
-  background: url(../images/bg2.jpg) no-repeat center fixed;
+  background: url(../images/company10.jpg) no-repeat center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -1,3 +1,78 @@
+<style>
+
+/* drop down */
+.dropbtn {
+  /* background-color: #146bb5; */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f26936;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #146bb5;color: #f26936;}
+/* drop down */
+
+.dropdown-submenu{
+    position: absolute;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+drob-btn{
+    background-color: #146bb5;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+dropdown-contents{
+    display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-contents a:hover {background-color: #f26936;}
+
+.dropdown-submenu:hover .dropdown-contents {display: block;}
+
+.dropdown-submenu:hover .drob-btn {background-color: #3e8e41;}
+</style>
 <body>
     <!--header-->
     <header id="site-header" class="fixed-top">
@@ -22,14 +97,38 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Company</a>
+                        <li class="nav-item dropdown" id="dropdown">
+                            <a class="nav-link dropbtn" href="#">Company</a>
+                            <div class="dropdown-content">
+                                <a href="about.php">About Us</a>
+                                <a href="#" class="dropdown-submenu" id="dropdownShow">
+                                    <a href="" class="drob-btn">How We Work</a>
+                                    <div class="dropdown-contents">
+                                        <a href="about.php">Development Process</a>
+                                        <a href="#">Quality Management System</a>
+                                        <a href="#">Delivery Model</a>
+                                        <a href="#">Intelectual Property Protection</a>
+                                    </div>
+                                </a>
+                                <a href="#">Help</a>
+                                <a href="#">Blog</a>
+                                <a href="contact.php">Contact Us</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="services.php">Our Services</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="product.php">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link ropbtn" href="#">Products</a>
+                            <div class="dropdown-content">
+                                <a href="#">Norak ERP Software</a>
+                                <a href="#">Accounting Software</a>
+                                <a href="#">School Management Software</a>
+                                <a href="#">PayRoll Software</a>
+                                <a href="#">Inventory Management</a>
+                                <a href="#">Law Management Software</a>
+                                <a href="#">Church Management Software</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Training</a>
@@ -55,3 +154,5 @@
         </div>
     </header>
     <!--//header-->
+
+    

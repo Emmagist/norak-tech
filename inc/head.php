@@ -14,4 +14,13 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // document.getElementById('dropdownShow').style.display = 'none';
+        $('dropdownShow').hide();
+        $('#dropdown').mouseover(function () {
+            alert('alert here')
+            $('dropdownShow').show();
+        });
+    </script>
 </head>
