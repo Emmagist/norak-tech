@@ -16,11 +16,15 @@
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+    // document.addEventListener(mouese)
+    // $('.drob-btn').mouseover(function () {
+    //     $('#sub-menu-ul').show();
+    // })
         // document.getElementById('dropdownShow').style.display = 'none';
-        $('dropdownShow').hide();
-        $('#dropdown').mouseover(function () {
-            alert('alert here')
-            $('dropdownShow').show();
-        });
+        // $('dropdownShow').hide();
+        // $('#dropdown').mouseover(function () {
+        //     alert('alert here')
+        //     $('dropdownShow').show();
+        // });
     </script>
 </head>

@@ -1,4 +1,5 @@
 <?php 
+    require_once "process.php";
     require "inc/head.php";
     require "inc/header2.php";
 ?>
@@ -78,7 +79,25 @@
                     </div>
                     <div class="row contact-block align-items-center">
                         <div class="col-md-9 contact-right mt-md-0 mt-4 pl-lg-4 m-auto">
-                            <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                            <form action="" method="post" class="signin-form" id="contactForm">
+                                <div class="error bg-danger mb-5">
+                                    <?php
+                                        if (isset($errors)) {
+                                            foreach ($errors as $error) {
+                                                echo '<li class="text-white p-4 text-center unstyled">'. $error .'</li>';
+                                            }
+                                        }
+                                    ?>
+                                </div>
+                                <div class="bg-success success mb-5">
+                                    <?php
+                                        if (isset($success)) {
+                                            // foreach ($errors as $error) {
+                                                echo '<li class="text-white p-4 text-center unstyled">'. $success .'</li>';
+                                            // }
+                                        }
+                                    ?>
+                                </div>
                                 <div class="input-grids">
                                     <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*"
                                         class="contact-input" required="" />
@@ -91,7 +110,7 @@
                                     <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*"
                                         required=""></textarea>
                                 </div>
-                                <button class="btn btn-style mt-sm-3">Send Message</button>
+                                <button type="submit" class="btn btn-style mt-sm-3" id="submitButton" name="submitButton">Send Message</button>
                             </form>
                         </div>
                     </div>
@@ -104,3 +123,53 @@
 
 
     <?php require "inc/footer.php"; ?>
+
+    <script>
+        setTimeout(function(){
+            $(".error").hide();
+        }, 4000);
+
+        setTimeout(function(){
+            $(".success").hide();
+        }, 4000);
+
+        $('#contactForm').submit(function () {
+            // alert("oppp")
+            // e.preventDefault();
+            var formData = new FormData();
+            // alert(formData);
+            $.ajax({
+                url: 'process.php?getData=002',
+                data: formData,
+                type: 'post',
+                dataType: 'json',
+                cache:false,
+                contentType: false,
+                processData: false,
+                beforeSend: function () {
+                    $('#submitButton').text('Sending');
+                },
+                success: function (params) {
+                    if (params) {
+                        swal({
+                            title: "Good job!",
+                            text: params,
+                            icon: "success",
+                        });
+
+                        setTimeout(() => {
+                            location.reload();
+                        }, 1000);
+
+                    }else{
+                        swal({
+                            title: "Error!",
+                            text: params,
+                            icon: "error",
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+    </script>

@@ -102,16 +102,18 @@ dropdown-contents{
                             <a class="nav-link dropbtn" href="#">Company</a>
                             <div class="dropdown-content">
                                 <a href="about.php">About Us</a>
-                                <a href="#" class="dropdown-submenu" id="dropdownShow">
+                                <!-- <a href="#" class="dropdown-submenu" id="dropdownShow"> -->
                                     <a href="" class="drob-btn">How We Work</a>
-                                    <div class="dropdown-contents">
-                                        <a href="about.php">Development Process</a>
-                                        <a href="#">Quality Management System</a>
-                                        <a href="#">Delivery Model</a>
-                                        <a href="#">Intelectual Property Protection</a>
+                                    <div style="display: none; margin-left:147px;margin-top:-20px;background:#f1f1f1;width:160px" id="sub-menu-ul">
+                                        <ul>
+                                            <li><a href="development.php">Development Process</a></li>
+                                            <li><a href="quality-management.php">Quality Management System</a></li>
+                                            <li><a href="delivery-model.php">Delivery Model</a></li>
+                                            <li><a href="intellectual-property.php">Intelectual Property Protection</a></li>
+                                        </ul>
                                     </div>
-                                </a>
-                                <a href="#">Help</a>
+                                <!-- </a> -->
+                                <a href="#" style="margin-top: -210%;">Help</a>
                                 <a href="#">Blog</a>
                                 <a href="contact.php">Contact Us</a>
                             </div>

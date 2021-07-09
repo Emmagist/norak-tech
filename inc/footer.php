@@ -37,8 +37,26 @@
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5 pl-lg-5">
                         <h6 class="footer-title-29">Newsletter </h6>
                         <form action="#" class="subscribe d-flex align-items-center" method="post">
-                            <input type="email" name="email" placeholder="Email Address" required="">
-                            <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+                            <div class="error bg-danger mb-5">
+                                <?php
+                                    if (isset($erros)) {
+                                        foreach ($erros as $err) {
+                                            echo '<li class="text-white p-4 text-center unstyled">'. $err .'</li>';
+                                        }
+                                    }
+                                ?>
+                            </div>
+                            <div class="bg-success success mb-5">
+                                <?php
+                                    if (isset($succes)) {
+                                        // foreach ($errors as $error) {
+                                            echo '<li class="text-white p-4 text-center unstyled">'. $succes .'</li>';
+                                        // }
+                                    }
+                                ?>
+                            </div>
+                            <input type="email" name="email" placeholder="Email Address" required="" id="emailField">
+                            <button type="submit" name="subscribe" id="subscribeBt"><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
                         </form>
                         <h6 class="footer-title-29 pt-2 mt-4 mb-3">Give us a free call: </h6>
                         <a href="tel:+12 23456790">+234-888-888-8888</a>
@@ -165,6 +183,14 @@
     <!-- owl carousel -->
     <script src="assets/js/owl.carousel.js"></script>
     <!-- script for tesimonials carousel slider -->
+
+    <script>
+        
+        $('#emailField').mouseout(function () {
+            // alert('tty')
+            $('#subscribeBt').click();
+        })
+    </script>
     <script>
         $(document).ready(function () {
             $("#owl-demo2").owlCarousel({
@@ -279,6 +305,19 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
     <!-- //Js scripts -->
+
+    <script>
+        $('#sub-menu-ul').hide();
+        $('.drob-btn').mouseover(function () {
+            // alert("Heyeyyeye")
+            $('#sub-menu-ul').show();
+            $('#sub-menu-ul').mouseout(function () {
+                $('#sub-menu-ul').hide();
+            })
+            // $('#sub-menu-ul').hide();
+        })
+        $('#sub-menu-ul').hide();
+    </script>
 </body>
 
 </html>

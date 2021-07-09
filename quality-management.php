@@ -3,12 +3,27 @@
     require "inc/header2.php";
 ?>
 
+<!-- inner banner -->
+<div class="inner-banner">
+    <div class="w3l-breadcrumb">
+        <div class="container">
+            <h4 class="inner-text-title font-weight-bold mb-2">Services</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="index.php">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Quality Management System
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- //inner banner -->
+
 <!-- about section -->
-<section class="w3l-aboutblock pt-4 pb-5">
+<section class="w3l-aboutblock pt-4 pb-5 mt-5">
     <div class="container pb-md-5 pb-sm-4">
         <div class="row">
             <div class="col-lg-6 left-wthree-img mt-lg-0 mt-5 order-lg-first order-last">
-                <img class="img-fluid img-responsive" src="assets/images/product-show.jpg" alt=" " style="height: 550px;">
+                <img class="img-fluid img-responsive" src="assets/images/product-show.jpg" alt=" " style="height: 500px;">
             </div>
             <div class="col-lg-6 about-right-faq align-self pl-lg-5 mt-xl-4 order-lg-last order-first">
                 <!-- <h3 class="text-bgs mb-md-3 mb-2">Since <span>2000</span></h3> -->

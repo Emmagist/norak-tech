@@ -18,7 +18,9 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  /* min-width: 160px;
+  max-width: 20px; */
+  width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -37,30 +39,32 @@
 .dropdown:hover .dropbtn {background-color: #146bb5;color: #f26936;}
 /* drop down */
 
-.dropdown-submenu{
+/* .dropdown-submenu{
     position: absolute;
     display: inline-block;
-    margin-left: 100px;
-}
+} */
 
-drob-btn{
+/* drob-btn{
     background-color: #146bb5;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
-}
+} */
 
 dropdown-contents{
     display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  margin-left: 100%;
+  margin-top: 80px;
+  background:red;
+  min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-contents a {
+    /* margin-left: 100%; */
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -69,9 +73,9 @@ dropdown-contents{
 
 .dropdown-contents a:hover {background-color: #f26936;}
 
-.dropdown-submenu:hover .dropdown-contents {display: block;}
+/* .dropdown-submenu:hover .dropdown-contents {display: block;}
 
-.dropdown-submenu:hover .drob-btn {background-color: #3e8e41;}
+.dropdown-submenu:hover .drob-btn {background-color: #3e8e41;} */
 </style>
 <body>
     <!--header-->
@@ -101,19 +105,27 @@ dropdown-contents{
                             <a class="nav-link dropbtn" href="#">Company</a>
                             <div class="dropdown-content">
                                 <a href="about.php">About Us</a>
-                                <a href="#" class="dropdown-submenu" id="dropdownShow">
+                                <!-- <a href="#" class="dropdown-submenu" id="dropdownShow"> -->
                                     <a href="" class="drob-btn">How We Work</a>
-                                    <div class="dropdown-contents">
-                                        <a href="about.php">Development Process</a>
-                                        <a href="#">Quality Management System</a>
-                                        <a href="#">Delivery Model</a>
-                                        <a href="#">Intelectual Property Protection</a>
+                                    <div style="display: none; margin-left:147px;margin-top:-20px;background:#f1f1f1;width:160px" id="sub-menu-ul">
+                                        <ul>
+                                            <li><a href="development.php">Development Process</a></li>
+                                            <li><a href="quality-management.php">Quality Management System</a></li>
+                                            <li><a href="delivery-model.php">Delivery Model</a></li>
+                                            <li><a href="intellectual-property.php">Intelectual Property Protection</a></li>
+                                        </ul>
                                     </div>
-                                </a>
-                                <a href="#">Help</a>
+                                <!-- </a> -->
+                                <a href="#" style="margin-top: -210%;">Help</a>
                                 <a href="#">Blog</a>
                                 <a href="contact.php">Contact Us</a>
                             </div>
+                            <!-- <div class="dropdown-contents">
+                                <a href="development.php">Development Process</a>
+                                <a href="quality-management.php">Quality Management System</a>
+                                <a href="delivery-model.php">Delivery Model</a>
+                                <a href="intellectual-property.php">Intelectual Property Protection</a>
+                            </div> -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="services.php">Our Services</a>
